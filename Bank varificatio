@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nepal KYC Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f5f7;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 22px;
+      padding: 13px;
+      border: none;
+      border-radius: 7px;
+      background: #1769aa;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0d568f;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 12px;
+      background: #fff7df;
+      border-radius: 7px;
+      font-size: 13px;
+      color: #664d03;
+    }
+
+    .consent {
+      margin-top: 18px;
+      font-size: 13px;
+    }
+
+    .consent input {
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>Nepal KYC Verification</h2>
+  <div class="subtitle">Please enter your details</div>
+
+  <form onsubmit="submitForm(event)">
+
+    <label>Full Name</label>
+    <input type="text" name="name" placeholder="Enter your full name" required>
+
+    <label>Mobile Number</label>
+    <input type="tel" name="mobile" placeholder="+977 98XXXXXXXX" required>
+
+    <label>Bank Name</label>
+    <select name="bank" required>
+      <option value="">Select Bank</option>
+      <option>Nepal Bank Limited</option>
+      <option>Rastriya Banijya Bank</option>
+      <option>Nabil Bank</option>
+      <option>Global IME Bank</option>
+      <option>NIC Asia Bank</option>
+      <option>Himalayan Bank</option>
+      <option>Everest Bank</option>
+      <option>Other</option>
+    </select>
+
+    <label>Account Holder Name</label>
+    <input type="text" name="account_name" placeholder="Enter account holder name" required>
+
+    <label>KYC Document</label>
+    <select name="document" required>
+      <option value="">Select document</option>
+      <option>Citizenship</option>
+      <option>National ID</option>
+      <option>Passport</option>
+      <option>Driving License</option>
+    </select>
+
+    <label>Document Number</label>
+    <input type="text" name="document_number"
+           placeholder="Enter document number" required>
+
+    <div class="consent">
+      <input type="checkbox" required>
+      I confirm that the information provided is correct.
+    </div>
+
+    <button type="submit">Submit KYC</button>
+
+  </form>
+
+  <div class="notice">
+    For your security, never enter your bank password, OTP, PIN, CVV,
+    or internet banking login details.
+  </div>
+
+</div>
+
+<script>
+function submitForm(event) {
+  event.preventDefault();
+  alert("KYC form submitted successfully.");
+}
+</script>
+
+</body>
+</html>
